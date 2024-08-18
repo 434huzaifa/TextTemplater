@@ -7,9 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "db:generate": "drizzle-kit generate:pg",
+    "db:generate": "drizzle-kit generate",
     "db:drop": "drizzle-kit drop",
-    "db:migrate": "ts-node ./api/db/migrate.ts"
+    "db:migrate": "drizzle-kit migrate"
   },
   "dependencies": {
     "better-sqlite3": "^11.1.2",
@@ -19,7 +19,9 @@
     "react-dom": "^18",
     "sqlite": "^5.1.1",
     "sqlite3": "^5.1.7",
-    "uuid": "^10.0.0"
+    "uuid": "^10.0.0",
+    "zod": "^3.23.8",
+    "zod-validation-error": "^3.3.1"
   },
   "devDependencies": {
     "@types/better-sqlite3": "^7.6.11",

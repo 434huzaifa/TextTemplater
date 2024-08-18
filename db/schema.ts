@@ -1,8 +1,8 @@
-import { InferInsertModel, InferModelFromColumns, InferSelectModel } from "drizzle-orm";
+import { InferInsertModel, InferSelectModel } from "drizzle-orm";
 import { text, integer, sqliteTable } from "drizzle-orm/sqlite-core";
 import { v4 } from "uuid";
 
-const texts = sqliteTable("Texts", {
+export const texts = sqliteTable("Texts", { // give export otherwise world will be doomed
     id: integer("id").primaryKey(),
     template: text("template"),
     uuid: text("uuid").default(v4()),
