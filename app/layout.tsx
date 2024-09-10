@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
+import ReactQueryProvider from "./utils/ReactQueryProvider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -25,7 +26,10 @@ export default function RootLayout({
             <li className="font-bold text-lg text-blue-500 underline hover:scale-110 transition-all"> <Link href="/insert">Insert Page</Link> </li>
           </ul>
         </nav>
+        <ReactQueryProvider>
         {children}
+
+        </ReactQueryProvider>
       </body>
     </html>
   );
